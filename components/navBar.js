@@ -2,11 +2,16 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
+import useStore from '@/app/(store)/store';
 
 export default function NavBar() {
     const [showNavLinks, setShowNavLinks] = useState(false);
+    const items = useStore(state => state.items)
+    const addItems = useStore(state => state.addItems)
 
     const toggleNavLinks = () => {
+        addItems()
+        console.log(items)
         setShowNavLinks(!showNavLinks);
     };
 

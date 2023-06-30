@@ -1,6 +1,22 @@
+'use client'
+import useStore from "@/app/(store)/store";
 import CardProducts from "./cardProducts";
+import { useEffect } from 'react'
 
 export default function Deals() {
+    const items = useStore((state) => state.items)
+    const addItem = useStore((state) => state.addItems)
+
+    useEffect(() => {
+        const fetchDataAndSave = async () => {
+            const response = await fetch('https://api.stripe.com/sk_test_51NFnLOIrs3QRYXjf3wHraqWYWfg7QZCOJJeaubivqf7k4BXJ85lbWnK4JtwWEEtZjfgYbGPdcqqBGhw6GOo0dHjh00ZAjR6NnK/v1/products/')
+            const item = await response.json()
+            addItem(item)
+            console.log(item)
+            console.log(items.length)
+        }
+        fetchDataAndSave()
+    }, [addItem])
     const products = [
         {
             image: "path/to/product-image-1.jpg",
