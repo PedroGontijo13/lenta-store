@@ -12,7 +12,10 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@stripe/react-stripe-js": "^2.1.1",
+    "@stripe/stripe-js": "^1.54.1",
     "next": "^13.4.7",
+    "stripe": "^12.10.0",
     "zustand": "^4.3.8"
   }
 }
