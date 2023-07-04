@@ -1,9 +1,6 @@
-'use client'
 import useStore from "@/app/(store)/store";
 import CardProducts from "./cardProducts";
-import { useEffect } from 'react'
 import Stripe from "stripe";
-import { loadStripe } from '@stripe/stripe-js';
 
 async function getStripeProducts() {
     const stripe = new Stripe(process.env.STRIPE_SECRET ?? "", {
@@ -17,8 +14,7 @@ async function getStripeProducts() {
 }
 
 export default async function Deals() {
-    const products = await getStripeProducts();
-    console.log(products);
+    const products = await getStripeProducts()
 
     return (
         <div className="flex flex-wrap justify-center gap-4">

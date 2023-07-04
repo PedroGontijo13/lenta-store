@@ -1,8 +1,27 @@
 import { create } from "zustand";
 
-const useStore = create(set => ({
-    items: [{}],
-    addItems: (newItem) => set((state) => ({items: newItem}))
+const useCart = create(set => ({
+    cart: [],
+    product: {},
+    setProduct: (params) => {
+        const { newProduct } = params
+        set((state) => {
+            return {
+                ...state,
+                product: newProduct
+            }
+        })
+    },
+    addItemToCart: (params) => {
+        const { newItem } = params
+        set((state) => {
+            const newCart = [...state.cart, newItem]
+            return {
+                ...state,
+                cart: newCart,
+            }
+        })
+    }
 }))
 
-export default useStore
+export default useCart
