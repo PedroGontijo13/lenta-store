@@ -14,6 +14,7 @@ export const POST = async (request) => {
     const stripe = new Stripe(process.env.STRIPE_SECRET ?? "", {
       apiVersion: "2022-11-15",
     });
+    
 
     const session = await stripe.checkout.sessions.create({
       success_url: "http://localhost:3000/sucess",
