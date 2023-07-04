@@ -18,7 +18,7 @@ export default function NavBar() {
             <div className="flex p-4 flex-row justify-between items-center">
 
                 <Link href="/">
-                    <p className="text-orange-400 text-2xl font-bold">LentaSotre
+                    <p className="text-orange-400 text-2xl font-bold">LentaStore
                     </p>
                 </Link>
                 <nav className="flex items-center space-x-5">
@@ -26,7 +26,11 @@ export default function NavBar() {
                         <li className='px-2'>
                             <Link href="/">Home</Link>
                         </li>
-                        <li className='px-2'>Shop Online</li>
+                        <li className='px-2'>
+                            <Link href='/shop'>
+                                Shop Online
+                            </Link>
+                        </li>
                         <li className='px-2'>What's New</li>
                         <li className='px-2'>Contact</li>
                         <li className='px-2'>
@@ -53,7 +57,11 @@ export default function NavBar() {
                         <li>
                             <Link href="/">Home</Link>
                         </li>
-                        <li>Shop Online</li>
+                        <li>
+                            <Link href='/shop'>
+                                Shop Online
+                            </Link>
+                        </li>
                         <li>What's New</li>
                         <li>Contact</li>
                         <li>
