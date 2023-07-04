@@ -31,8 +31,6 @@ export default function NavBar() {
                                 Shop Online
                             </Link>
                         </li>
-                        <li className='px-2'>What's New</li>
-                        <li className='px-2'>Contact</li>
                         <li className='px-2'>
                             <Link href="/cart">
                                 <FontAwesomeIcon
@@ -62,8 +60,6 @@ export default function NavBar() {
                                 Shop Online
                             </Link>
                         </li>
-                        <li>What's New</li>
-                        <li>Contact</li>
                         <li>
                             <Link href="/cart">
                                 <FontAwesomeIcon
