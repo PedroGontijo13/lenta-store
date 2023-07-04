@@ -19,7 +19,7 @@ export const POST = async (request) => {
       success_url: "http://localhost:3000/sucess",
       cancel_url: "http://localhost:3000/cancel",
       line_items: body.lineItems,
-      mode: "subscription", // Update the mode to 'subscription' if using recurring prices, or 'payment' if using one-time prices
+      mode: "payment"
     });
 
     return NextResponse.json({ session });
@@ -32,4 +32,4 @@ export const POST = async (request) => {
   }
 };
 
-export default POST;
+export default {POST};

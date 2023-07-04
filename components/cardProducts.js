@@ -18,7 +18,7 @@ export default function CardProducts(props) {
       cost,
       productInfo
     }
-    setProducts({newProduct})
+    setProducts({ newProduct })
     router.push('/product?price_id=' + price_id)
   };
 

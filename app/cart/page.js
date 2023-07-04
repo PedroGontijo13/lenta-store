@@ -54,14 +54,14 @@ export default function CartPage() {
                 )}
             </div>
             <div className="flex justify-center flex-row">
-                {cart &&
+                {!cart.length <= 0 && (
                     <button
                         onClick={checkout}
                         className="mt-4 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
                     >
                         Checkout
                     </button>
-                }
+                )}
             </div>
         </div>
     );
