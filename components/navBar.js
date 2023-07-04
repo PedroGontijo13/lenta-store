@@ -16,7 +16,11 @@ export default function NavBar() {
     return (
         <div className="border">
             <div className="flex p-4 flex-row justify-between items-center">
-                <p className="text-orange-400 text-2xl font-bold">LentaStore</p>
+
+                <Link href="/">
+                    <p className="text-orange-400 text-2xl font-bold">LentaSotre
+                    </p>
+                </Link>
                 <nav className="flex items-center space-x-5">
                     <ul className={`hidden sm:flex ${showNavLinks ? 'block' : 'hidden'}`}>
                         <li className='px-2'>

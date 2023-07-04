@@ -16,8 +16,8 @@ export const POST = async (request) => {
     });
 
     const session = await stripe.checkout.sessions.create({
-      success_url: "http://localhost:3000/sucess",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "https://lenta-store-foxt.vercel.app/sucess",
+      cancel_url: "https://lenta-store-foxt.vercel.app/cancel",
       line_items: body.lineItems,
       mode: "payment"
     });
