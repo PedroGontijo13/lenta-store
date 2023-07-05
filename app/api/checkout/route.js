@@ -17,7 +17,7 @@ export const POST = async (request) => {
       success_url: 'https://lenta-store-foxt.vercel.app/sucess',
       cancel_url: 'https://lenta-store-foxt.vercel.app/cancel',
       line_items: body.lineItems,
-      mode: 'subscription', // Switch to subscription mode
+      mode: 'payment', // Switch to subscription mode
     });
 
     return NextResponse.json({ session });
