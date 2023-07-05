@@ -1,5 +1,5 @@
 "use client"
-import SearchDeals from '@/components/searchDeals';
+import Deals from "@/components/deals";
 
 export default function ShopPage() {
     return (
@@ -20,7 +20,7 @@ export default function ShopPage() {
                 />
             </div>
             <div className="flex flex-row justify-center">
-                <SearchDeals />
+                <Deals/>
             </div>
         </div>
     );
