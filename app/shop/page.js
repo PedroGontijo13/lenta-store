@@ -1,7 +1,6 @@
 "use client"
 import Deals from "@/components/deals";
 
-
 export default function ShopPage() {
     return (
         <div>

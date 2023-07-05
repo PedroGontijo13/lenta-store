@@ -14,8 +14,8 @@ export const POST = async (request) => {
     });
 
     const session = await stripe.checkout.sessions.create({
-      success_url: 'https://lenta-store-foxt.vercel.app/sucess',
-      cancel_url: 'https://lenta-store-foxt.vercel.app/cancel',
+      success_url: 'https://lenta-store.vercel.app/sucess',
+      cancel_url: 'https://lenta-store.vercel.app/cancel',
       line_items: body.lineItems,
       mode: 'payment', // Switch to subscription mode
     });
